@@ -1,25 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import {StatusBar} from 'react-native';
 
-import {NavigationContainer} from '@react-navigation/native';
-
-import {StyleSheet, View, Text} from 'react-native';
+import Routes from './src/routes';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <View style={styles.container}>
-        <Text style={styles.sectionTitle}>Step One</Text>
-      </View>
-    </NavigationContainer>
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#7D40E7" />
+      <Routes />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#7159c1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
